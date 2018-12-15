@@ -16,7 +16,8 @@ define carbon::cache::instance (
   }
 
   service { "carbon-cache-${title}":
-    ensure => running
+    ensure => running,
+    enable => true
   }
 
   file { "/usr/lib/systemd/system/carbon-cache-${title}.service":

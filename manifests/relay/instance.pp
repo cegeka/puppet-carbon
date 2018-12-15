@@ -16,7 +16,8 @@ define carbon::relay::instance (
   }
 
   service { "carbon-relay-${title}":
-    ensure => running
+    ensure => running,
+    enable => true
   }
 
   file { "/usr/lib/systemd/system/carbon-relay-${title}.service":
